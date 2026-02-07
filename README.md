@@ -85,20 +85,6 @@ For **SOC2** and **ISO 27001**, logs must be tamper-proof.
 * **[TruffleHog](https://github.com/trufflesecurity/trufflehog)** - Find credentials/keys accidentally committed to Git.
 * **[Gitleaks](https://github.com/zricethezav/gitleaks)** - Light-weight secret scanner for git repos.
 
----
-
-## 📜 Deployment Scripts
-*Community-contributed scripts for deploying agents.*
-
-### Microsoft Intune (PowerShell)
-```powershell
-# Basic script to check if Agent is running, if not, install silently
-$ProcessName = "tmagent"
-$InstallerPath = "\\server\share\teramind_agent.msi"
-if (!(Get-Process $ProcessName -ErrorAction SilentlyContinue)) {
-    Start-Process msiexec.exe -ArgumentList "/i $InstallerPath /quiet /norestart" -Wait
-}
-
 ## ⚖️ Compliance Frameworks
 *Mapping tools to regulatory requirements.*
 
@@ -113,3 +99,17 @@ Missing a tool? Found a broken link?
 1. Fork the repo.
 2. Edit `README.md`.
 3. Submit a PR!
+
+---
+
+## 📜 Deployment Scripts
+*Community-contributed scripts for deploying agents.*
+
+### Microsoft Intune (PowerShell)
+```powershell
+# Basic script to check if Agent is running, if not, install silently
+$ProcessName = "tmagent"
+$InstallerPath = "\\server\share\teramind_agent.msi"
+if (!(Get-Process $ProcessName -ErrorAction SilentlyContinue)) {
+    Start-Process msiexec.exe -ArgumentList "/i $InstallerPath /quiet /norestart" -Wait
+}
