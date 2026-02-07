@@ -98,3 +98,18 @@ $InstallerPath = "\\server\share\teramind_agent.msi"
 if (!(Get-Process $ProcessName -ErrorAction SilentlyContinue)) {
     Start-Process msiexec.exe -ArgumentList "/i $InstallerPath /quiet /norestart" -Wait
 }
+
+## ⚖️ Compliance Frameworks
+*Mapping tools to regulatory requirements.*
+
+* **[NIST SP 800-53 (AU-12)](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final)** - *Audit Generation:* Requires information systems to provide audit record generation capability.
+* **[ISO 27001 (A.12.4)](https://www.iso.org/isoiec-27001-information-security.html)** - *Logging and Monitoring:* User activities, exceptions, and information security events must be recorded.
+* **[GDPR (Right to Access)](https://gdpr.eu/)** - Tools must allow you to *export* all data collected on a user if they request it.
+
+---
+
+## 🤝 Contributing
+Missing a tool? Found a broken link?
+1. Fork the repo.
+2. Edit `README.md`.
+3. Submit a PR!
